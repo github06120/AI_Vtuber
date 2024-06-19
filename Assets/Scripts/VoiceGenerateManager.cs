@@ -40,18 +40,15 @@ public class VoiceGenerateManager : MonoBehaviour
     public async UniTask GenerateVoice()
     {
         string apiURL = GetApiURL();
-        var request = new UnityWebRequest(apiURL, "POST");
-        request.SetRequestHeader("accept", "audio/wav");
-        await request.SendWebRequest();
+        var client = HttpClientLib.client;
+        var request = new HttpRequestMessage(HttpMethod.Post, apiURL);
+        request.Headers.Add("accept", "audio/wav");
+        var response = await client.SendAsync(request);
 
-        // var client = HttpClientLib.client;
-        // var request = new HttpRequestMessage(HttpMethod.Post, apiURL);
-        // request.Headers.Add("accept", "audio/wav");
-        // var response = await client.SendAsync(request);
-        if(request.isDone)
+        if(response.IsSuccessStatusCode)
         {
             Debug.Log("Connected Style-Bert-VITS2");
-            OutWav(request);
+            OutWav(response);
         }
         else
         {
@@ -70,9 +67,9 @@ public class VoiceGenerateManager : MonoBehaviour
     }
 
     // 音声データをAudioClipに変換
-    private void OutWav(UnityWebRequest request)
+    private async void OutWav(HttpResponseMessage response)
     {
-        byte[] audioBytes = request.downloadHandler.data;
+        byte[] audioBytes = await response.Content.ReadAsByteArrayAsync();
         AudioClip voice = WavUtility.ToAudioClip(audioBytes);
         voiceAudioSource.clip = voice;
     }
