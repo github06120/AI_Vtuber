@@ -12,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403ae2dd693bb1d4b924f6b8d206b053, type: 3}
   m_Name: vtuber_model.fadeMotionList
   m_EditorClassIdentifier: 
-  MotionInstanceIds: 18ccfbff
+  MotionInstanceIds: 18ccfbfffc2cfefff42cfeff042dfeffd425feffec2cfeff122dfeffec25feffc425feffbc25feffe425feffcc25feffdc25feff
   CubismFadeMotionObjects:
   - {fileID: 11400000, guid: ad00ca08c0a53bd4e954ad3ff17a6470, type: 2}
+  - {fileID: 11400000, guid: b6bcd28aacda9b14380d157c912cde70, type: 2}
+  - {fileID: 11400000, guid: e1b5944e479741d449233abc9ffa2aef, type: 2}
+  - {fileID: 11400000, guid: 48b969df635e9474b9ba749c6d192ab6, type: 2}
+  - {fileID: 11400000, guid: 512308824a9e4414d91d0de6f7853e8b, type: 2}
+  - {fileID: 11400000, guid: faffb9e9b4243b94b8d4d441a4319c3e, type: 2}
+  - {fileID: 11400000, guid: ec349d5ea2f4a1449b84329977d1a627, type: 2}
+  - {fileID: 11400000, guid: ba9e136c6c62c4642a55fff17706f20d, type: 2}
+  - {fileID: 11400000, guid: 296f3cbf62649374f9033e8a201fb6f8, type: 2}
+  - {fileID: 11400000, guid: 48bc937396fc9104b82a96c2670774e6, type: 2}
+  - {fileID: 11400000, guid: 51dc4dbeb33910b4e9e6b87886b0478c, type: 2}
+  - {fileID: 11400000, guid: 375c69fec9f0bc84ea0c397ee41ae761, type: 2}
+  - {fileID: 11400000, guid: 1a8cd27df34763c4a919288052868245, type: 2}
